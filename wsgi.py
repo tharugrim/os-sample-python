@@ -4,7 +4,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return (urllib.request.urlopen("http://www.stackoverflow.com").getcode()
+    return urllib.request.urlopen("http://www.stackoverflow.com").getcode().str()
 
 if __name__ == "__main__":
     application.run()
